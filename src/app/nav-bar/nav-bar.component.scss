@@ -1,0 +1,29 @@
+#nav-bar {
+  height: 50px;
+  width: 100%;
+  background: rgba(0,0,0,0.4);
+
+  .nav-button {
+    background: none;
+    align-items: center;
+    color: white;
+    padding-top: 15px;
+    font-weight: 100;
+    font-size: 20px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    white-space: nowrap;
+  }
+
+  .nav-button:hover {
+    background: rgba(0,0,0,0.05);
+  }
+
+  img {
+    margin-top: 5px;
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+  }
+}

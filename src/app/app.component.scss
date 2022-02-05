@@ -1,0 +1,14 @@
+#portfolio {
+  height: 100%;
+  .profile {
+    height: 70vh;
+  }
+  .content {
+    width: 100vw;
+  }
+  .sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+  }
+}

@@ -1,0 +1,29 @@
+@import "~@fortawesome/fontawesome-free/css/all.min.css";
+
+#profile {
+  padding: 30px;
+  background: rgba(0,0,0,0.4);
+  width: 400px;
+  color: white;
+  text-align: center;
+  margin: 140px auto 140px;
+  border-radius: 5%;
+
+  img {
+    border-radius: 5%;
+  }
+
+  .text {
+    font-weight: 100;
+
+    .name {
+      font-size: 35px;
+      letter-spacing: 4px;
+    }
+
+    .title {
+      font-size: 20px;
+      letter-spacing: 2px;
+    }
+  }
+}
