@@ -1,7 +1,7 @@
 #nav-bar {
   height: 50px;
   width: 100%;
-  background: rgba(0,0,0,0.4);
+  background: #39516D;
 
   .nav-button {
     background: none;
@@ -17,7 +17,8 @@
   }
 
   .nav-button:hover {
-    background: rgba(0,0,0,0.05);
+    background: #39506b;
+    opacity:0.5;
   }
 
   img {
