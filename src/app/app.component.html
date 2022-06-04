@@ -1,11 +1,11 @@
 <!--The content below is only a placeholder and can be replaced.-->
-<div id="portfolio">
-  <div id="homeComponent" class="profile">
-    <app-profile></app-profile>
+<div id="tourette">
+  <div id="homeComponent" class="home">
+    <app-home></app-home>
   </div>
   <div class="nav-bar" #navBarComponent>
     <app-nav-bar [class.sticky] = "stickNavBarToTop"
-                 (homeClicked)="scrollIntoView('homeComponent')"
+                 (homeClicked)="scrollHomeIntoView('homeComponent')"
                  (aboutMeClicked)="scrollIntoView('aboutMeComponent')"
                  (servicesClicked)="scrollIntoView('servicesComponent')"
                  (resourcesClicked)="scrollIntoView('resourcesComponent')"

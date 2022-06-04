@@ -1,13 +1,16 @@
 import { NgModule } from '@angular/core';
 import {FlexLayoutModule} from '@angular/flex-layout';
 import {ContactUsComponent} from './contact-us.component';
+import {ReactiveFormsModule} from "@angular/forms";
 
 @NgModule({
     declarations: [
         ContactUsComponent
     ],
     imports: [
-        FlexLayoutModule
+        FlexLayoutModule,
+      ReactiveFormsModule,
+      MatCheckboxModule
     ],
     providers: [],
     entryComponents: [

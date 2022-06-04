@@ -1,9 +1,35 @@
-<div id="contact-me" fxLayout="column" fxLayoutAlign="center center">
-  <div fxLayout="row" fxFlex="1 1 50%" fxLayoutAlign="center center">
-    <h4>Email: </h4>
-    <p>s.frederick@ascendcbit.com</p>
-    <br>
-    <h4>Phone Number: </h4>
-    <p>(239) 264-3081</p>
+<div id="contact-me" fxLayout="column">
+  <div fxLayout="row" fxFlex>
+    <div fxLayout="column" fxFlex="1 1 50%" fxLayoutAlign="center center" class="text-box">
+      <h1>Contact Us</h1>
+      <div fxLayout="row" fxLayoutGap="10px">
+        <h4>Email: </h4>
+        <p>s.frederick@ascendcbit.com</p>
+      </div>
+      <div fxLayout="row" fxLayoutGap="10px">
+        <h4>Phone Number: </h4>
+        <p>(239) 264-3081</p>
+      </div>
+    </div>
+    <div fxLayout="column" fxFlex="1 1 50%" fxLayoutAlign="center center">
+      <form class="text-center border border-light p-5" [formGroup]="formData" (ngSubmit)="onSubmit()">
+        <p class="h4 mb-4">Contact us</p>
+        <!-- Name -->
+        <input type="text" formControlName="fullName" id="defaultContactFormName" mdbInput
+               class="form-control mb-4" placeholder="Name">
+        <!-- Email -->
+        <input type="email" formControlName="email" id="defaultContactFormEmail" mdbInput
+               class="form-control mb-4" placeholder="E-mail">
+        <!-- Message -->
+        <div class="form-group">
+    <textarea formControlName="message" class="form-control rounded-0" mdbInput id="exampleFormControlTextarea2"
+              rows="3" placeholder="Message"></textarea>
+        </div>
+        <!-- Copy -->
+        <mat-checkbox [default]="true" class="mb-4">Send me a copy of this message</mat-checkbox>
+        <!-- Send button -->
+        <button mdbBtn color="info" outline="true" block="true" class="z-depth-0 my-4 waves-effect"
+                mdbWavesEffect type="submit" [disabled]="disabledSubmitButton">Send</button>
+      </form>    </div>
   </div>
 </div>
