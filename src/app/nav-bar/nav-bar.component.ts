@@ -9,8 +9,8 @@ export class NavBarComponent implements OnInit {
   @Output() public homeClicked = new EventEmitter();
   @Output() public aboutMeClicked = new EventEmitter();
   @Output() public servicesClicked = new EventEmitter();
-  @Output() public fAQClicked = new EventEmitter();
-  @Output() public contactMeClicked = new EventEmitter();
+  @Output() public resourcesClicked = new EventEmitter();
+  @Output() public contactUsClicked = new EventEmitter();
 
   constructor() { }
 
@@ -29,11 +29,11 @@ export class NavBarComponent implements OnInit {
     this.servicesClicked.emit();
   }
 
-  public gotToFAQ() {
-    this.fAQClicked.emit();
+  public gotToResources() {
+    this.resourcesClicked.emit();
   }
 
-  public gotToContactMe() {
-    this.contactMeClicked.emit();
+  public gotToContactUs() {
+    this.contactUsClicked.emit();
   }
 }

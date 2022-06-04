@@ -1,20 +1,20 @@
 import { NgModule } from '@angular/core';
 import {FlexLayoutModule} from '@angular/flex-layout';
-import {ContactMeComponent} from './contact-me.component';
+import {ContactUsComponent} from './contact-us.component';
 
 @NgModule({
     declarations: [
-        ContactMeComponent
+        ContactUsComponent
     ],
     imports: [
         FlexLayoutModule
     ],
     providers: [],
     entryComponents: [
-        ContactMeComponent
+        ContactUsComponent
     ],
     exports: [
-        ContactMeComponent
+        ContactUsComponent
     ]
 })
-export class ContactMeModule { }
+export class ContactUsModule { }

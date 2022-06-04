@@ -6,21 +6,21 @@ import { NavBarModule } from './nav-bar/nav-bar.module';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { ProfileModule } from './profile/profile.module';
 import { AboutMeComponent } from './about-me/about-me.component';
-import { FaqComponent } from './faq/faq.component';
+import { ResourcesComponent } from './resources/resources.component';
 import { ServicesComponent } from './services/services.component';
-import {ContactMeModule} from './contact-me/contact-me.module';
+import {ContactUsModule} from './contact-us/contact-us.module';
 
 @NgModule({
   declarations: [
     AppComponent,
     AboutMeComponent,
-    FaqComponent,
+    ResourcesComponent,
     ServicesComponent,
   ],
   imports: [
     BrowserModule,
     NavBarModule,
-    ContactMeModule,
+    ContactUsModule,
     FlexLayoutModule,
     ProfileModule
   ],
