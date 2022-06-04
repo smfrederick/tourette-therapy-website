@@ -6,7 +6,7 @@ import {FormBuilder, FormControl, FormGroup, Validators} from "@angular/forms";
   templateUrl: './contact-us.component.html',
   styleUrls: ['./contact-us.component.scss']
 })
-export class ContactUsComponent implements OnInit {
+export class ContactUsComponent {
   public formData: FormGroup;
   public disabledSubmitButton: boolean = true;
 
@@ -23,10 +23,6 @@ export class ContactUsComponent implements OnInit {
       message: new FormControl('', [Validators.required])
     });
   }
-
-  ngOnInit(): void {
-  }
-
   public onSubmit(): void {
     console.log(this.formData)
     // this.connectionService.sendMessage(this.contactForm.value).subscribe(() => {

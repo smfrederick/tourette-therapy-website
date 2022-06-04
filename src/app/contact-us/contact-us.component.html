@@ -12,24 +12,20 @@
       </div>
     </div>
     <div fxLayout="column" fxFlex="1 1 50%" fxLayoutAlign="center center">
-      <form class="text-center border border-light p-5" [formGroup]="formData" (ngSubmit)="onSubmit()">
-        <p class="h4 mb-4">Contact us</p>
+      <form [formGroup]="formData" (ngSubmit)="onSubmit()">
         <!-- Name -->
-        <input type="text" formControlName="fullName" id="defaultContactFormName" mdbInput
-               class="form-control mb-4" placeholder="Name">
+        <input type="text" formControlName="fullName" id="defaultContactFormName"
+               fxLayout="row" placeholder="Name">
         <!-- Email -->
-        <input type="email" formControlName="email" id="defaultContactFormEmail" mdbInput
-               class="form-control mb-4" placeholder="E-mail">
+        <input type="email" formControlName="email" id="defaultContactFormEmail"
+               fxLayout="row" placeholder="E-mail">
         <!-- Message -->
-        <div class="form-group">
-    <textarea formControlName="message" class="form-control rounded-0" mdbInput id="exampleFormControlTextarea2"
-              rows="3" placeholder="Message"></textarea>
-        </div>
-        <!-- Copy -->
-        <mat-checkbox [default]="true" class="mb-4">Send me a copy of this message</mat-checkbox>
+        <textarea formControlName="message" fxLayout="row" id="exampleFormControlTextarea2"
+                  rows="10" placeholder="Message"></textarea>
         <!-- Send button -->
-        <button mdbBtn color="info" outline="true" block="true" class="z-depth-0 my-4 waves-effect"
-                mdbWavesEffect type="submit" [disabled]="disabledSubmitButton">Send</button>
-      </form>    </div>
+        <button color="info" outline="true" block="true" class="z-depth-0 my-4 waves-effect"
+                type="submit" [disabled]="disabledSubmitButton">Send</button>
+      </form>
+    </div>
   </div>
 </div>
