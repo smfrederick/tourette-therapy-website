@@ -5,6 +5,10 @@
   color: white;
   display: inline-block;
 
+  p {
+    margin-top: 27px;
+  }
+
   .text-box {
     font-size: 1.300em;
   }
@@ -17,10 +21,12 @@
     border: 1px solid #ccc;
     border-radius: 4px;
     box-sizing: border-box;
+    font-weight: 100;
+    font-size: 15px;
   }
 
   textarea {
-    width: 100%;
+    width: 500px;
     padding: 12px 20px;
     margin: 8px 0;
     display: inline-block;
@@ -28,5 +34,16 @@
     border-radius: 4px;
     box-sizing: border-box;
     resize: none;
+    font-weight: 100;
+    font-size: 15px;
+  }
+
+  button {
+    width: 100%;
+    height: 50px;
+    background: #39516D;
+    color: white;
+    font-weight: 100;
+    font-size: 15px;
   }
 }

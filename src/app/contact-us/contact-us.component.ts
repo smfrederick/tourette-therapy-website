@@ -1,5 +1,6 @@
 import {Component, HostListener, OnInit} from '@angular/core';
 import {FormBuilder, FormControl, FormGroup, Validators} from "@angular/forms";
+import {HttpClient, HttpHeaders} from "@angular/common/http";
 
 @Component({
   selector: 'app-contact-us',
@@ -16,21 +17,25 @@ export class ContactUsComponent {
     }
   }
 
-  constructor(private builder: FormBuilder) {
+  constructor(private builder: FormBuilder, private http: HttpClient) {
     this.formData = this.builder.group({
       fullName: new FormControl('', [Validators.required]),
-      email: new FormControl(''),
+      email: new FormControl('', Validators.compose([Validators.required, Validators.email])),
       message: new FormControl('', [Validators.required])
     });
   }
   public onSubmit(): void {
-    console.log(this.formData)
-    // this.connectionService.sendMessage(this.contactForm.value).subscribe(() => {
-    //   alert('Your message has been sent.');
-    //   this.contactForm.reset();
-    //   this.disabledSubmitButton = true;
-    // }, error => {
-    //   console.log('Error', error);
-    // });
+    if (this.formData.valid) {
+      const email = this.formData.value;
+      const headers = new HttpHeaders({ 'Content-Type': 'application/json' });
+      this.http.post('https://formspree.io/f/mlezvayk',
+          { name: email.fullName, replyto: email.email, message: email.message },
+          { 'headers': headers }).subscribe(
+          response => {
+            // Add toast here for successful email sent or error
+            this.formData.reset();
+          }
+      );
+    }
   }
 }

@@ -15,13 +15,13 @@
       <form [formGroup]="formData" (ngSubmit)="onSubmit()">
         <!-- Name -->
         <input type="text" formControlName="fullName" id="defaultContactFormName"
-               fxLayout="row" placeholder="Name">
+               fxLayout="row" placeholder="Name" required>
         <!-- Email -->
         <input type="email" formControlName="email" id="defaultContactFormEmail"
-               fxLayout="row" placeholder="E-mail">
+               fxLayout="row" placeholder="E-mail" required>
         <!-- Message -->
         <textarea formControlName="message" fxLayout="row" id="exampleFormControlTextarea2"
-                  rows="10" placeholder="Message"></textarea>
+                  rows="10" placeholder="Message" required></textarea>
         <!-- Send button -->
         <button color="info" outline="true" block="true" class="z-depth-0 my-4 waves-effect"
                 type="submit" [disabled]="disabledSubmitButton">Send</button>
