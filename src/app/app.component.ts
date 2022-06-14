@@ -15,6 +15,10 @@ export class AppComponent implements AfterViewInit {
   }
 
   public scrollIntoView(elementId: string) {
+    document.getElementById(elementId)?.scrollIntoView({behavior: 'smooth', block: 'start', inline: 'nearest'});
+  }
+
+  public scrollHomeIntoView(elementId: string) {
     document.getElementById(elementId)?.scrollIntoView({behavior: 'smooth', block: 'end', inline: 'nearest'});
   }
 

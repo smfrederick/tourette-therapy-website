@@ -1,9 +1,14 @@
 #about-me {
   background: #979AA2;
   width: 100%;
-  height: 70vw;
+  height: 100vh;
   color: white;
-  text-align: center;
   display: inline-block;
+
+  .text-box {
+    line-height: 30px;
+    font-size: 1.300em;
+    padding-right: 30px;
+  }
 }
 

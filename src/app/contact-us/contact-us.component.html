@@ -1,0 +1,31 @@
+<div id="contact-me" fxLayout="column">
+  <div fxLayout="row" fxFlex>
+    <div fxLayout="column" fxFlex="1 1 50%" fxLayoutAlign="center center" class="text-box">
+      <h1>Contact Us</h1>
+      <div fxLayout="row" fxLayoutGap="10px">
+        <h4>Email: </h4>
+        <p>s.frederick@ascendcbit.com</p>
+      </div>
+      <div fxLayout="row" fxLayoutGap="10px">
+        <h4>Phone Number: </h4>
+        <p>(239) 264-3081</p>
+      </div>
+    </div>
+    <div fxLayout="column" fxFlex="1 1 50%" fxLayoutAlign="center center">
+      <form [formGroup]="formData" (ngSubmit)="onSubmit()">
+        <!-- Name -->
+        <input type="text" formControlName="fullName" id="defaultContactFormName"
+               fxLayout="row" placeholder="Name" required>
+        <!-- Email -->
+        <input type="email" formControlName="email" id="defaultContactFormEmail"
+               fxLayout="row" placeholder="E-mail" required>
+        <!-- Message -->
+        <textarea formControlName="message" fxLayout="row" id="exampleFormControlTextarea2"
+                  rows="10" placeholder="Message" required></textarea>
+        <!-- Send button -->
+        <button color="info" outline="true" block="true" class="z-depth-0 my-4 waves-effect"
+                type="submit" [disabled]="disabledSubmitButton">Send</button>
+      </form>
+    </div>
+  </div>
+</div>
