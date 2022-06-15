@@ -1,20 +1,20 @@
 import { NgModule } from '@angular/core';
 import {FlexLayoutModule} from '@angular/flex-layout';
-import {ProfileComponent} from './profile.component';
+import {HomeComponent} from './home.component';
 
 @NgModule({
   declarations: [
-    ProfileComponent
+    HomeComponent
   ],
   imports: [
     FlexLayoutModule
   ],
   providers: [],
   entryComponents: [
-    ProfileComponent
+    HomeComponent
   ],
   exports: [
-    ProfileComponent
+    HomeComponent
   ]
 })
-export class ProfileModule { }
+export class HomeModule { }
