@@ -9,9 +9,21 @@ export class AppComponent implements AfterViewInit {
   @ViewChild('navBarComponent') public navBarElement!: ElementRef;
   public menuPosition: any;
   public stickNavBarToTop = false;
+  public screenWidth = 0;
+  public hideSmall = false;
+
+  constructor() {
+    this.onResize();
+  }
 
   public ngAfterViewInit(): void {
     this.menuPosition = this.navBarElement.nativeElement.offsetTop;
+  }
+
+  @HostListener('window:resize', ['$event'])
+  public onResize(event?: any) {
+    this.screenWidth = window.innerWidth;
+    this.hideSmall = this.screenWidth <=  576;
   }
 
   public scrollIntoView(elementId: string) {
