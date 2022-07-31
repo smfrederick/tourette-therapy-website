@@ -7,8 +7,12 @@
   color: white;
   display: inline-block;
 
+
   .text-box {
-    line-height: 30px;
+    p {
+      line-height: 30px;
+    }
+
     font-size: 1.300em;
     padding-left: 30px;
     padding-right: 30px;
