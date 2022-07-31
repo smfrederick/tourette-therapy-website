@@ -27,12 +27,17 @@
     }
   }
 
-  mat-icon {
-    color: white;
+  .menu-icon {
+    &-open {
+      color: white;
+    }
+    &-closed {
+      color: #39516D;
+    }
   }
 
   .open-menu {
-    background: #39516D !important;
+    background: #39516D;
   }
 }
 

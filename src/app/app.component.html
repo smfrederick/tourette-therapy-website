@@ -6,7 +6,7 @@
 
   <div class="side-nav-bar" *ngIf="hideSmall" [ngClass]="{'open-menu': isMenuOpen}" (clickElsewhere)="closeSideNav()">
     <button  mat-button class="menu-button" (click)="toggleSideNav()">
-      <mat-icon>{{ isMenuOpen ? 'menu_open' : 'menu' }}</mat-icon>
+      <mat-icon [ngClass]="{'menu-icon-open': isMenuOpen, 'menu-icon-close': !isMenuOpen}">{{ isMenuOpen ? 'menu_open' : 'menu' }}</mat-icon>
     </button>
     <div class="side-nav-bar-menu" *ngIf="isMenuOpen">
       <app-side-nav-bar
