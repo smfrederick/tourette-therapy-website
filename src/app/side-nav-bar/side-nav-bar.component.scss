@@ -1,0 +1,30 @@
+#side-nav-bar {
+  min-width: 100px;
+  height: calc(100vh - 44px);
+  background: #39516D !important;
+
+  .side-nav-button {
+    display: block;
+    width: 100%;
+    text-align: left;
+    background: none;
+    align-items: center;
+    color: white !important;
+    padding: 15px 24px 6px;
+    font-weight: 100;
+    font-size: 20px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    white-space: nowrap;
+  }
+
+  .side-nav-container {
+    height: 30vh;
+  }
+
+  .side-nav-button:hover {
+    background: #39506b;
+    opacity:0.5;
+  }
+}

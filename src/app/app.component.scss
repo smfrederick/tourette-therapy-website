@@ -1,4 +1,6 @@
 #tourette {
+  min-height: 100vh;
+
   .sticky {
     position: fixed;
     top: 0;
@@ -10,4 +12,32 @@
     bottom: 0;
     height: 50px;
   }
+
+  .side-nav-bar{
+    position: fixed;
+    z-index: 10000;
+    top: 0;
+
+    .menu-button {
+      margin-top: 20px;
+      margin-left: 20px;
+      min-width: 0;
+      padding: 0;
+      line-height: normal;
+    }
+  }
+
+  .menu-icon {
+    &-open {
+      color: white;
+    }
+    &-closed {
+      color: #39516D;
+    }
+  }
+
+  .open-menu {
+    background: #39516D;
+  }
 }
+
