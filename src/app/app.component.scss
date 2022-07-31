@@ -12,4 +12,27 @@
     bottom: 0;
     height: 50px;
   }
+
+  .side-nav-bar{
+    position: fixed;
+    z-index: 10000;
+    top: 0;
+
+    .menu-button {
+      margin-top: 20px;
+      margin-left: 20px;
+      min-width: 0;
+      padding: 0;
+      line-height: normal;
+    }
+  }
+
+  mat-icon {
+    color: white;
+  }
+
+  .open-menu {
+    background: #39516D !important;
+  }
 }
+

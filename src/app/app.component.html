@@ -3,6 +3,21 @@
   <div id="homeComponent" class="home">
     <app-home></app-home>
   </div>
+
+  <div class="side-nav-bar" *ngIf="hideSmall" [ngClass]="{'open-menu': isMenuOpen}" (clickElsewhere)="closeSideNav()">
+    <button  mat-button class="menu-button" (click)="toggleSideNav()">
+      <mat-icon>{{ isMenuOpen ? 'menu_open' : 'menu' }}</mat-icon>
+    </button>
+    <div class="side-nav-bar-menu" *ngIf="isMenuOpen">
+      <app-side-nav-bar
+        (homeClicked)="scrollHomeIntoView('homeComponent')"
+        (aboutMeClicked)="scrollIntoView('aboutMeComponent')"
+        (servicesClicked)="scrollIntoView('servicesComponent')"
+        (resourcesClicked)="scrollIntoView('resourcesComponent')"
+        (contactUsClicked)="scrollIntoView('contactUsComponent')"></app-side-nav-bar>
+    </div>
+  </div>
+
   <div class="nav-bar" #navBarComponent>
     <app-nav-bar *ngIf="!hideSmall" [class.sticky] = "stickNavBarToTop"
                  (homeClicked)="scrollHomeIntoView('homeComponent')"
@@ -17,3 +32,4 @@
     <app-contact-us id="contactUsComponent"></app-contact-us>
   </div>
 </div>
+
