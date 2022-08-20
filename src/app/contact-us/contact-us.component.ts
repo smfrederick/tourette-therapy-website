@@ -1,6 +1,7 @@
 import {Component, HostListener, OnInit} from '@angular/core';
 import {FormBuilder, FormControl, FormGroup, Validators} from "@angular/forms";
 import {HttpClient, HttpHeaders} from "@angular/common/http";
+import toast from '@brenoroosevelt/toast'
 
 @Component({
   selector: 'app-contact-us',
@@ -28,11 +29,46 @@ export class ContactUsComponent {
     if (this.formData.valid) {
       const email = this.formData.value;
       const headers = new HttpHeaders({ 'Content-Type': 'application/json' });
-      this.http.post('https://formspree.io/f/mlezvayk',
+      this.http.post('https://formspree.io/f/xrgdgnon',
           { name: email.fullName, replyto: email.email, message: email.message },
-          { 'headers': headers }).subscribe(
-          response => {
+          { 'headers': headers })
+        .subscribe(
+          (response) => {
             // Add toast here for successful email sent or error
+            toast.success("We have received your email!", {
+              "position": "bottom",
+              "align": "center",
+              "title": "Success",
+              "type": "success",
+              "closeBtn": false,
+              "dismissible": true,
+              "append": true,
+              "shadow": true,
+              "duration": 5000,
+              "maxWidth": 600,
+              "animateOut": 200,
+              "animateIn": 200,
+              "actions": []
+            });
+            this.formData.reset();
+          },
+          (error) => {
+            // Add toast here for successful email sent or error
+            toast.error("Unable to send email. Please try again later.", {
+              "position": "bottom",
+              "align": "center",
+              "title": "Something went wrong",
+              "type": "error",
+              "closeBtn": false,
+              "dismissible": true,
+              "append": true,
+              "shadow": true,
+              "duration": 5000,
+              "maxWidth": 600,
+              "animateOut": 200,
+              "animateIn": 200,
+              "actions": []
+            });
             this.formData.reset();
           }
       );
