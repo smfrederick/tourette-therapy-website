@@ -7,6 +7,21 @@
   color: white;
   display: inline-block;
 
+  .image-box {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+
+    img {
+      padding: 0;
+      display: block;
+      margin: 0 auto;
+      max-height: 100%;
+      max-width: 90%;
+    }
+  }
+
+
   .text-box {
     line-height: 30px;
     font-size: 1.300em;

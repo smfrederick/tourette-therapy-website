@@ -46,7 +46,7 @@ export class AppComponent implements AfterViewInit {
   @HostListener('window:scroll', ['$event'])
   public windowScrolling() {
     const windowScroll = window.pageYOffset;
-    this.stickNavBarToTop = windowScroll >= this.menuPosition;
+    this.stickNavBarToTop = windowScroll >= this.menuPosition - 50;
   }
 
   public toggleSideNav(): void {

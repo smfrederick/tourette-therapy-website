@@ -28,7 +28,7 @@ export class ContactUsComponent {
     if (this.formData.valid) {
       const email = this.formData.value;
       const headers = new HttpHeaders({ 'Content-Type': 'application/json' });
-      this.http.post('https://formspree.io/f/mlezvayk',
+      this.http.post('https://formspree.io/f/xrgdgnon',
           { name: email.fullName, replyto: email.email, message: email.message },
           { 'headers': headers }).subscribe(
           response => {
